@@ -1,11 +1,17 @@
 const profile = {
 username: "Jacob",
 playTime: 300,
+getInfo() {
+    return `${this.username} has ${this.playTime} active hours!`;
+},
+changeUsername(newUserName){
+    this.username = newUserName;
+return `${this.username} has ${this.playTime} active hours!`
+},
+updatePlayTime(updatedTime){
+return this.playTime += updatedTime;
+},
 };
-
-
-
-
 
 
 console.log(profile.getInfo()); // "Jacob has 300 active hours!"
@@ -18,7 +24,8 @@ console.log(profile.getInfo()); // "Marco has 320 active hours!"
 
 
 
-!!!Для звернення до властивостей об’єкта в його методах використовується this
+
+/* !!!Для звернення до властивостей об’єкта в його методах використовується this
 
 1) Метод changeUsername(newName) повинен приймати рядок (нове ім’я) в параметр newName та змінювати значення властивості username на нове. Нічого не повертає.
 Значення властивості changeUsername — це функція
@@ -27,4 +34,4 @@ console.log(profile.getInfo()); // "Marco has 320 active hours!"
 Значення властивості updatePlayTime — це функція
 
 3) Метод getInfo() має повертати рядок формату <Username> has <amount> active hours!, де <Username> — це ім’я профілю, а <amount> — кількість ігрових годин.
-Значення властивості getInfo — це функція
+Значення властивості getInfo — це функція */
